@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - INSTAGRAM_USERNAME=evawijaya6146
+      - INSTAGRAM_PASSWORD=@Nova123
+    volumes:
+      - ./session_instagram.json:/app/session_instagram.json
+    command: ["/entrypoint.sh"]
